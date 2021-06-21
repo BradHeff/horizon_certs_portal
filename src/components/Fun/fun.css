@@ -1,0 +1,94 @@
+.after-overlay-white,
+.after-overlay-grey,
+.overlay-lighter,
+.after-overlay-1,
+.after-overlay-2,
+.after-overlay-3,
+.after-overlay-4,
+.after-overlay-5,
+.after-overlay-6,
+.after-overlay-7,
+.after-overlay-8,
+.after-overlay-9,
+.after-overlay-10,
+.about-overlay {
+    position: relative;
+}
+
+.after-overlay-white::after,
+.after-overlay-grey::after,
+.overlay-lighter::after,
+.after-overlay-1::after,
+.after-overlay-2::after,
+.after-overlay-3::after,
+.after-overlay-4::after,
+.after-overlay-5::after,
+.after-overlay-6::after,
+.after-overlay-7::after,
+.after-overlay-8::after,
+.after-overlay-9::after,
+.after-overlay-10::after,
+.about-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.after-overlay-white::after {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.after-overlay-grey::after {
+    background-color: rgba(241, 241, 241, 0.8);
+}
+
+.overlay-lighter::after {
+    background-color: rgba(18, 30, 66, .7);
+}
+
+.about-overlay::after {
+    background: rgba(255, 255, 255, 0.92);
+}
+
+.after-overlay-1::after {
+    background-color: rgba(31, 47, 92, .1);
+}
+
+.after-overlay-2::after {
+    background-color: rgba(31, 47, 92, .2);
+}
+
+.after-overlay-3::after {
+    background-color: rgba(31, 47, 92, .3);
+}
+
+.after-overlay-4::after {
+    background-color: rgba(31, 47, 92, .4);
+}
+
+.after-overlay-5::after {
+    background-color: rgba(31, 47, 92, .5);
+}
+
+.after-overlay-6::after {
+    background-color: rgba(31, 47, 92, .6);
+}
+
+.after-overlay-7::after {
+    background-color: rgba(31, 47, 92, .7);
+}
+
+.after-overlay-8::after {
+    background-color: rgba(44, 62, 79, .8);
+}
+
+.after-overlay-9::after {
+    background-color: rgba(31, 47, 92, .9);
+}
+
+.after-overlay-10::after {
+    background-color: rgba(31, 47, 92, 1.0);
+}

@@ -1,0 +1,57 @@
+
+.btn_title {
+    position: relative;
+    min-height: calc(100vh - 106px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../assets/images/HorizonCS-275-scaled.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.btn_title h1 {
+    font-size: calc(42px + 2vmin);
+    font-family: 'Montserrat';
+
+}
+
+.btn-rounded {
+    border-radius: 20px;
+}
+
+.arrow
+{
+  position: relative;
+  bottom: -2rem;
+  left: 50%;
+  margin-left:-20px;
+  width: 40px;
+  height: 40px;
+
+  /**
+   * Dark Arrow Down
+   */
+
+  background-image: url(../../assets/images/down-arrow.svg);
+  background-size: contain;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
