@@ -4,10 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
-/src/assets/apps/Mobile Zone Installer.msi
-/src/assets/apps/Mobile Zone Installer.pkg
-/src/assets/apps/NAP Locked down browser.dmg
-/src/assets/apps/NAP Locked down browser.msi
+/public/assets/apps/Mobile Zone Installer.msi
+/public/assets/apps/Mobile Zone Installer.pkg
+/public/assets/apps/NAP Locked down browser.dmg
+/public/assets/apps/NAP Locked down browser.msi
 
 # testing
 /coverage

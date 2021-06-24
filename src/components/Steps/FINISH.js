@@ -15,6 +15,7 @@ const Step3 = (props) => {
                 </div>
                 <div className="row d-flex align-items-center justify-content-center pb-5">
                     <div className="col-12 mb-4">
+                    <h3>Close you Browser (Chrome/Safari) and open it again</h3>
                     <p data-aos="zoom-in-up">Check your certificate installation by navigating to <a href="https://google.com">www.google.com</a></p>
                     <div className="img-zoom mt-4" data-aos="zoom-in-up">
                         <a  href={s9} data-caption="Step #9" onClick={_handleClick}><img src={s9} alt={s9} className="img-fluid mb-2"/></a>

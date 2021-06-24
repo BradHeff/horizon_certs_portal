@@ -5,12 +5,6 @@ import MAXcert from '../../assets/certs/linewize.cert.zip';
 
 import StyleWhite from '../../Styles/StyleWhite';
 
-import winApp from '../../assets/apps/Mobile Zone Installer.msi';
-import macApp from '../../assets/apps/Mobile Zone Installer.pkg';
-
-import napWin from '../../assets/apps/NAP Locked down browser.msi';
-import napMac from '../../assets/apps/NAP Locked down browser.dmg';
-
 const Step1 = (props) => {
   const getBrowser = () => {
     var geckobrowsers;
@@ -77,9 +71,9 @@ const Step1 = (props) => {
                   <p data-aos="flip-right">Before we begin on this installation we need to first download the certificate, Click the button below to begin your download.</p>
                   <hr />
                   <a href={props.os === 0 ? cert : MAXcert} className="btn btn-outline-primary btn-cert px-5 mt-3 mt-xl-3 mr-xl-3"onClick={props.download} target="_blank" download={true} rel="noopener noreferrer">Download Certificate ({OS})</a>
-                  <a href={props.os === 0 ? winApp : macApp} className="btn btn-outline-primary btn-cert px-5 mt-3 mt-xl-3">Download App ({OS})</a>
+                  <a href={props.os === 0 ? process.env.PUBLIC_URL + '/assets/apps/Mobile Zone Installer.msi' : process.env.PUBLIC_URL + '/assets/apps/Mobile Zone Installer.pkg'} className="btn btn-outline-primary btn-cert px-5 mt-3 mt-xl-3">Download App ({OS})</a>
                   <div className="text-center">
-                  <a href={props.os === 0 ? napWin : napMac} className="btn btn-outline-primary btn-cert px-5 my-3 my-xl-5 mr-xl-3">Download NAPLAN Browser ({OS})</a>
+                  <a href={props.os === 0 ? process.env.PUBLIC_URL + '/assets/apps/NAP Locked down browser.msi' : process.env.PUBLIC_URL + '/assets/apps/NAP Locked down browser.dmg'} className="btn btn-outline-primary btn-cert px-5 my-3 my-xl-5 mr-xl-3">Download NAPLAN Browser ({OS})</a>
                   </div>
                   <hr />
                   <p className="mt-3" data-aos="flip-left"><i>We have detected your system is running {OS}, if this is incorrect please see the IT guy for further assistance</i></p>                  

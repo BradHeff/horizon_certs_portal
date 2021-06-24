@@ -1,7 +1,7 @@
 import React from 'react';
 import './buttons.css';
 import * as Scroll from "react-scroll";
-import Particles from 'react-particles-js';
+// import Particles from 'react-particles-js';
 
 // import StyleWhite from '../../Styles/StyleWhite';
 import StyleGrey from '../../Styles/StyleGrey';
@@ -30,7 +30,7 @@ const Buttons = (props) => {
               <StyleGrey trans={true} />
             </div>
           </div>
-          <div style={{zIndex: 1033, position: 'absolute', width: '100%', height: '100%', top: 0, left: 0}}>
+          {/* <div style={{zIndex: 1033, position: 'absolute', width: '100%', height: '100%', top: 0, left: 0}}>
             <Particles
                 params={{
                     "particles": {
@@ -83,7 +83,7 @@ const Buttons = (props) => {
                         }
                     }
                 }} />
-                </div>
+                </div> */}
         
         </div>
   );

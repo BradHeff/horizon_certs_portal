@@ -1,12 +1,11 @@
 import React from 'react';
 import StyleGrey from '../../Styles/StyleGrey';
-import { Player, BigPlayButton } from 'video-react';
-import "video-react/dist/video-react.css";
+import YouTube from 'react-youtube';
 
-import thumb1 from '../../assets/images/win_vid_thumb.png';
+// import thumb1 from '../../assets/images/win_vid_thumb.png';
 // import thumb2 from '../../assets/images/mac_vid_thumb.png';
 
-const VID1 = "/assets/videos/Vid1.mp4";
+// const VID1 = "/assets/videos/Vid1.mp4";
 // const VID2 = "/assets/videos/Vid2.mp4";
 
 class Video extends React.Component {
@@ -19,22 +18,10 @@ class Video extends React.Component {
             text: 'Enlarge Video'
         }
     }
-    componentDidUpdate() {
-        if (this.props.os === 0) {
-            this.player1.subscribeToStateChange(this.handleStateChangeVid1.bind(this));    
-        }
-    }
     
-    handleStateChangeVid1(state, prevState) {
-            
-        if(state.ended) {
-            this.player1.load();
-        }
-    }
-    
-    handleFullScreen = () => {
-        this.player1.toggleFullscreen()
-    }
+    _onReady = (event) => {
+        event.target.pauseVideo();
+      }
     toggleExpand = () => {
         if(!this.state.toggle) {
             this.setState({
@@ -54,7 +41,12 @@ class Video extends React.Component {
     }
 
     render() {
-        console.log(this.state.toggle)
+        const opts = {
+            playerVars: {
+              // https://developers.google.com/youtube/player_parameters
+              autoplay: 0,
+            },
+          };
         return (
             <div className="position-relative section white-bg">
                 <div className="container text-center">
@@ -70,9 +62,7 @@ class Video extends React.Component {
                                 </div>
                                 
                                 <div className="img-border-invert border-image">
-                                    <Player ref={(player => this.player1 = player)} src={VID1} poster={thumb1}>
-                                        <BigPlayButton position="center" />
-                                    </Player>
+                                    <YouTube videoId="EUyyxOuUQuM" opts={opts} onReady={this._onReady} className="w-100"/>  
                                 </div>                                
                             </div>
                             <div className={`${this.state.expand2} col-12`}>
